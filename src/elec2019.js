@@ -143,7 +143,12 @@ window.fetchResult = function fetchResult(event, url) {
 		};
 		console.log(obj);
 		return obj;
-	}).then(result => document.getElementById(url).innerHTML = renderResult(result));
+	}).then(result => document.getElementById(url).innerHTML = renderResult(result)
+	).catch(function(error) {
+		let item = document.getElementById(url);
+		item.appendChild(document.createTextNode(" - Not yet available"));
+		item.querySelector('a').setAttribute('onclick', "(function (event) { event.preventDefault(); })(event)");
+	});
 };
 
 window.renderSenators = function renderSenators() {
