@@ -1,4 +1,5 @@
 rootUrl = window.location.href;
+rootUrl = rootUrl.replace(/#.*/, '');
 rootUrl = rootUrl.replace('/regions/root.json', '');
 root = JSON.parse(document.body.innerText);
 
