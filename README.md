@@ -9,6 +9,8 @@ npm run build
 
 The bookmarklet should be compiled as `dist/elec2019.js`
 
+Alternatively, see the [releases](https://github.com/madumlao/elec2019/releases) page to acquire a precompiled version.
+
 ## Installing the bookmarklet
 Open the compiled `dist/elec2019.js`. Select the contents of the entire file and "copy".
 
