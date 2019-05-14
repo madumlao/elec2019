@@ -1,0 +1,19 @@
+{
+  "name": "elec2019",
+  "version": "1.0.0",
+  "description": "Parser for 2019electionresults.comelec.gov.ph",
+  "main": "src/elec2019.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bookmarkleter": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node bookmarklet.js > dist/elec2019.js"
+  },
+  "author": {
+    "name": "Mark David Dumlao",
+    "email": "madumlao@gmail.com"
+  },
+  "license": "ISC"
+}
