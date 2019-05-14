@@ -109,7 +109,12 @@ window.fetchRegion = function fetchRegion(event, url) {
 		};
 		console.log(obj);
 		return obj;
-	}).then(region => document.getElementById(region.url).innerHTML = renderRegion(region)); 
+	}).then(region => document.getElementById(region.url).innerHTML = renderRegion(region)
+	).catch(function(error) {
+		let item = document.getElementById(url);
+		item.appendChild(document.createTextNode(" - Not yet available"));
+		item.querySelector('a').setAttribute('onclick', "(function (event) { event.preventDefault(); })(event)");
+	});
 };
 
 window.fetchResult = function fetchResult(event, url) {
